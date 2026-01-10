@@ -57,9 +57,9 @@ tw-passage[tags~="kitchen"]{
 
 You&#39;re a little late for the single lunch sitting they run per week, and the other five guests are seated already. They watch you, as people do, as you walk to your seat at the end of the bar. The chef isn&#39;t present yet. 
 
-[[Sit down and look around-&gt;Seat]]</tw-passagedata><tw-passagedata pid="2" name="First Course" tags="bar" position="450,50" size="100,100">Annoyingly, you&#39;re served last; he&#39;s serving clockwise. You&#39;ve not had Opah before. A red meat from a red fish. In English, it&#39;s called both moonfish and sunfish depending on who you ask, and no, it&#39;s not *that* sunfish. White people suck at naming things. But this Chinese dude is damn good at making sushi.
+[[Sit down and look around-&gt;Seat]]</tw-passagedata><tw-passagedata pid="2" name="First Course" tags="bar" position="450,50" size="100,100">Annoyingly, you&#39;re served last; he&#39;s serving clockwise. You&#39;ve not had Opah before: it&#39;s a beautiful red meat from a strange red fish. In English, it&#39;s called both moonfish and sunfish depending on who you ask, and no, it&#39;s not *that* sunfish. White people suck at naming things. But this Chinese dude is damn good at making sushi.
 
-You finish your bite, and [[take a look around at the other diners-&gt;First course look]]
+You finish your bite, and [[take a look around at the other diners-&gt;First course look]].
 
 </tw-passagedata><tw-passagedata pid="3" name="Chef Intro" tags="bar" position="325,50" size="100,100">As you take your first sip of water, Chef Yi walks out the back. &quot;Ah, I see we&#39;re all here. Welcome to Sushi Liu. I like to be straightforward: sake is provided. If you need your water refilled, please ask. We do not modify the dishes. We do not accomodate allergies.&quot;
 
@@ -73,7 +73,7 @@ You finish your bite, and [[take a look around at the other diners-&gt;First cou
 
 The man next to you is taking notes in a notebook. He sees you glancing over, and strikes up a conversation: &quot;You also here by yourself?&quot;
 
-[[Second course convo&lt;-Explain your boyfriend is in London for work right now.]]</tw-passagedata><tw-passagedata pid="5" name="Second course convo" tags="bar" position="800,50" size="100,100">&quot;Mine too! What a coincidence!&quot; he says. You&#39;re not sure if he&#39;s implying if he&#39;s gay, but luckily he keeps talking. &quot;Yeah, it&#39;s much easier to get seats for one here, so I have been given //permission// to come by myself. I&#39;ll try to bring the wife later. I&#39;m Edward, by the way.&quot;
+[[Second course convo&lt;-Explain your boyfriend is in London for work right now]].</tw-passagedata><tw-passagedata pid="5" name="Second course convo" tags="bar" position="800,50" size="100,100">&quot;Mine too! What a coincidence!&quot; he says. You&#39;re not sure if he&#39;s implying if he&#39;s gay, but luckily he keeps talking. &quot;Yeah, it&#39;s much easier to get seats for one here, so I have been given //permission// to come by myself. I&#39;ll try to bring the wife later. I&#39;m Edward, by the way.&quot;
 
 Not gay, just confusing wording.
 
@@ -176,7 +176,7 @@ Or, if you have any questions for Tim, you could always ask him, while in this r
 
 [[Investigate the box-&gt;Breaker lock]]
 [[Investigate the inspection rota-&gt;Toilet rota]]
-[[Go back to the bar-&gt;Bar]]</tw-passagedata><tw-passagedata pid="20" name="Variables" tags="startup" position="150,225" size="100,100">(set:$toiletopen to false) (set:$boxopen to false) (set:$bagopen to false) (set:$phoneopen to false) (set:$rotaseen to false)</tw-passagedata><tw-passagedata pid="21" name="Bag lock" tags="bar" position="1000,575" size="100,100">The bag is a small woman&#39;s handbag, sitting by Eleanor&#39;s seat.
+[[Go back to the bar-&gt;Bar]]</tw-passagedata><tw-passagedata pid="20" name="Variables" tags="startup" position="150,225" size="100,100">(set:$toiletopen to false) (set:$boxopen to false) (set:$bagopen to false) (set:$phoneopen to false) (set:$rotaseen to false)</tw-passagedata><tw-passagedata pid="21" name="Bag lock" tags="bar" position="1000,550" size="100,100">The bag is a small woman&#39;s handbag, sitting by Eleanor&#39;s seat.
 
 This will be physically provided, and the physical puzzle is recreated below for reference.
 (if: $bagopen) [
@@ -184,7 +184,7 @@ This will be physically provided, and the physical puzzle is recreated below for
   
   [[Look inside-&gt;Bag interior]]]
   (else:)[
-  The bag has a padlock on it. It has a four letter ALL CAPS answer. The lock has a tag on it saying:
+  The bag has a padlock on it. It has a four letter ALL CAPS answer. The lock has a //cryptic// tag on it saying:
   
   &quot;The medium is the message&quot;, a philosopher said.
 
@@ -247,7 +247,7 @@ That&#39;s today&#39;s date.
 
 [[Return to the kitchen-&gt;Kitchen]]</tw-passagedata><tw-passagedata pid="29" name="Seating" tags="bar" position="925,350" size="100,100">You examine where the diners were sitting. It&#39;s all as you expect, though you notice Rob didn&#39;t wash his hands with the cloth: it&#39;s totally untouched. That&#39;s kinda gross. Edward also left his notebook.
 
-Lastly, you notice a small black bag, by Eleanor&#39;s seat.
+Lastly, you notice a small green handbag, by Eleanor&#39;s seat.
 
 [[Investigate Edward&#39;s notebook-&gt;Notebook]]
 [[Investigate the bag-&gt;Bag lock]]
@@ -274,14 +274,16 @@ Who was this fifth liver for?
 
 [[Let&#39;s try again...-&gt;Kitchen]]</tw-passagedata><tw-passagedata pid="36" name="Breaker lock" tags="toilet" position="575,1100" size="100,100">You pull at the box door, but soon realize it&#39;s locked shut.
 
-(A padlocked box will be physically provided, but you should also do the below.)
+(A code-locked box will be physically provided, but you should also do the below.)
 
 (if: $boxopen) [
   The box is open.
   
   [[Look inside-&gt;Breaker lock]]]
   (else:)[
-  There is a small label on the box: the day I shut down this fucking hellhole.
+  There is a small label on the box: &quot;The day I shut down this fucking hellhole.&quot;
+  
+  The lock accepts 3 digits.
 
   (input: bind _password)
   (link-replace: &quot;Submit&quot;)[
@@ -325,9 +327,11 @@ Dolores is maybe 25, and an attractive Asian-American girl. You found her Instag
 [[Ask why she was eating at the restaurant that day-&gt;Dolores why]]
 
 [[Return to station-&gt;Suspects]]
-</tw-passagedata><tw-passagedata pid="41" name="Bag interior" tags="bar" position="1150,600" size="100,100">Inside the bag, there is a credit card, with the name &quot;Eleanor Moore&quot; and a credit card number: 4918202762955902.
+</tw-passagedata><tw-passagedata pid="41" name="Bag interior" tags="bar" position="1125,550" size="100,100">Inside the bag, there is a credit card, with the name &quot;Eleanor Moore&quot; and a credit card number: 0225 0510 0113 0519.
 
 There are also some crumpled, unsigned divorce papers in the bag, but it looks like the owner has blacked out all the names. Almost... violently. You send them to forensics. They&#39;ll be able to figure out what&#39;s under there, but you won&#39;t hear back until you&#39;re off the case... Whatever these papers are though, they are *definitely* not signed.
+
+Oh, I also forgot to mention a large wad of cash. It&#39;s not a puzzle though.
 
 [[Return to seating-&gt;Seating]]</tw-passagedata><tw-passagedata pid="42" name="Investigate the point-of-service system" tags="kitchen" position="400,500" size="100,100">It doesn&#39;t take you long to figure out how to use the tablet PoS payment system. &quot;I could be a waitress...&quot; you mumble to yourself.
 
@@ -373,7 +377,7 @@ You get the impression he&#39;s hiding something.
 
 You decide to leave it. You need these people to keep talking even after you&#39;re taken off the case.
 
-[[Back to Rob-&gt;Rob]]</tw-passagedata><tw-passagedata pid="48" name="Rob Dolores" tags="station" position="1375,1075" size="100,100">Is she James&#39; Moore&#39;s girlfriend? I don&#39;t know about her, and I don&#39;t wanna know.
+[[Back to Rob-&gt;Rob]]</tw-passagedata><tw-passagedata pid="48" name="Rob Dolores" tags="station" position="1375,1075" size="100,100">Is she James Moore&#39;s girlfriend? I don&#39;t know about her, and I don&#39;t wanna know.
 
 [[Back to Rob-&gt;Rob]]</tw-passagedata><tw-passagedata pid="49" name="Toilet rota" tags="toilet" position="850,1150" size="100,100">You glance at the rota. Boring. You flip it over. Suddenly, an entry from months ago catches your eye. 
 
@@ -436,7 +440,7 @@ Under the napkin, there&#39;s a phone. How were you not told about a missing pho
 
 That handwriting... You&#39;ve seen it before. But where?
 
-(if: $phonepen) [
+(if: $phoneopen) [
   [[The phone is unlocked-&gt;Phone messages]]]
   (else:)[
   The phone is locked. It wants a numerical pin code...
@@ -444,7 +448,7 @@ That handwriting... You&#39;ve seen it before. But where?
   (input: bind _password)
   (link-replace: &quot;Submit&quot;)[
     (if: _password is &quot;5902&quot;)[
-    (set:$phoneopen to True) It opens! [[ Look inside-&gt;Phone messages]]]
+    (set:$phoneopen to true) It opens! [[ Look inside-&gt;Phone messages]]]
     (if: _password is not &quot;5902&quot;)[
     Wrong! [[Try again?-&gt;Breaker box]]]]
 ]
@@ -471,16 +475,19 @@ It&#39;s just you and Dolores in the interview room, you&#39;ve shut off the mic
 
 &quot;Close the restaurant?&quot; you ask, shocked for perhaps the first time today..
 
-&quot;Yeah, he said not to book after next month He said the last day was Valentine&#39;s day. I guess he&#39;s a month early to that now...&quot;
+&quot;Yeah, he said not to book after next month: the last day was Valentine&#39;s day. I guess he&#39;s a month early to that now...&quot;
 
 [[Back to Edward-&gt;Edward]]</tw-passagedata><tw-passagedata pid="62" name="Edward why" tags="station" position="2550,1050" size="100,100">He seems a little more taken off guard by this simple question than you&#39;d expect... 
 
 &quot;Didn&#39;t we talk about this earlier? My wife is in New York. I&#39;m here for Sushi.&quot;
 
-[[Back to Edward-&gt;Edward]]</tw-passagedata><tw-passagedata pid="63" name="PoS deepdive" tags="kitchen" position="450,875" size="100,100">You spend several minutes scrolling through the PoS. There is only one other abnormality you notice. On a pre-booking, early next month, there is a tip of $2,500,000. You note the last four digits: 5902.
+[[Back to Edward-&gt;Edward]]</tw-passagedata><tw-passagedata pid="63" name="PoS deepdive" tags="kitchen" position="450,875" size="100,100">You spend several minutes scrolling through the PoS. There is only one other abnormality you notice. On a pre-booking, early next month, there is a tip of $2,500,000. You note the last four digits: 0519.
 
 [[Return to kitchen-&gt;Kitchen]]
 </tw-passagedata><tw-passagedata pid="64" name="Notebook" tags="bar" position="825,525" size="100,100">The notebook contains nothing but notes on Sushi. This man knows what he is talking about, he&#39;s eaten at a lot of places.
+
+(A notebook will be provided.)
+
 (if: $boxopen)[[[You recognize the handwriting...-&gt;Notebook deep dive]]]
 [[Go back to the seating-&gt;Seating]]</tw-passagedata><tw-passagedata pid="65" name="First course look" tags="bar" position="575,50" size="100,100">The bar is quite quiet, other than the WMAF couple seated at the end, who are exchanging slightly obnoxious remarks in lowered voices: he&#39;s obviously wealthy, and by the sounds of it, she&#39;s spoiled. She&#39;s notably younger than him, and it definitely feels like the other diners have noticed: you certainly have. You&#39;ve also learnt their names: James and Dolores.
 
@@ -490,7 +497,7 @@ You notice James glancing at the woman two seats down more than once. You feel l
 
 He hands you another piece of sushi: &quot;Our second course: aka yagara, or red trumpet fish.&quot;
 
-[[Eat it-&gt;Second course]]
+[[Eat it-&gt;Second course]].
 </tw-passagedata><tw-passagedata pid="66" name="Third course convo" tags="bar" position="1000,50" size="100,100">You&#39;ve grasped she&#39;s called Eleanor.  Well, the man next to her specifically says Eleanori; you are not sure if this is a deliberate pun, or just a pet name, but you guess they are dating after all. His name placard is tilted towards you, and you can make out &quot;Robert&quot; on it. And //apparently// he doesn&#39;t like how salty the roe is, and he offers it over. She takes it, and you&#39;re both jealous and disappointed. 
 
 Their conversation seems... one-sided. Eleanor seems focused on something that is not Rob: probably the sushi she&#39;s eating.
@@ -500,13 +507,13 @@ Their conversation seems... one-sided. Eleanor seems focused on something that i
 
 You flip through the book again. There is nothing in it of any interest...
 
-[[Return to murder scene-&gt;Murder scene]]</tw-passagedata><tw-passagedata pid="68" name="Phone messages" tags="toilet" position="775,1425" size="100,100">The phone is curiously anonymised.... There&#39;s no photos on it, no emails, no ID. You could probably trace the SIM back. This is a burner phone of some sort. Maybe everyone *did* have their actual phones on them. Why would someone need a phone like this?
+[[Return to murder scene-&gt;Murder scene]]</tw-passagedata><tw-passagedata pid="68" name="Phone messages" tags="toilet" position="775,1425" size="100,100">The phone is curiously anonymised.... There&#39;s no photos on it, no emails, no ID. You could probably trace the SIM back. This is a burner phone of some sort: most likely everyone *did* have their actual phones on them... But why would anyone need a phone like this?
 
 There is only one text conversation on the phone. A lot of the messages have been deleted, but they haven&#39;t got to the end yet...
 
 Here&#39;s what you have:
 
-Gray: I&#39;m here. He was cutting a fugu fish when I came in! Did James request fugu?
+Gray: I just got here. No phne service inside. He was cutting a fugu fish when I came in! Did James request fugu?
 Blue: ??? no ???
 Gray: Odd
 Gray: Didn&#39;t you set the menu?
@@ -544,22 +551,35 @@ Dolores is silent.
 
 &quot;We had to stop it, but also couldn&#39;t have James find out about... us. We need James&#39; money We panicked. I panicked. James hit the lights, and I... I wanted to cause an injury. Something that would guaranteed stop them from one more course. But I guess... sometimes you miss.&quot;
 
+She stops talking.
+
 [[Continue-&gt;Conclusion 4]]
 
 
-</tw-passagedata><tw-passagedata pid="72" name="Conclusion 4" tags="station" position="1875,200" size="100,100">&quot;I&#39;m sorry, Dolores.&quot;
+</tw-passagedata><tw-passagedata pid="72" name="Conclusion 5" tags="station" position="2050,200" size="100,100">&quot;...Don&#39;t be. I deserve this.&quot;
 
-&quot;Don&#39;t be. I deserve this.&quot;
+&quot;You deserve a fraud charge, and a unintentional manslaughter charge, and you&#39;ll probably get those. Don&#39;t delete more texts. Your boss was about to be poisoned - I have the numb lips to prove it - and you acted to protect him. Hell, for all you know you were about to be poisoned too, by the man you accidentally stabbed. You have a pretty good shot at self-defence.&quot;
 
-&quot;You deserve a fraud charge, and a unintentional manslaughter charge, and you&#39;ll probably get those. Don&#39;t delete more texts. Your boss was about to be poisoned - I have the numb lips to prove it - and you acted to protect him. Hell, for all you know you were about to be poisoned too, by the man you killed. You have a pretty good shot at self-defence.&quot;
+&quot;What?&quot; Dolores asks?
 
-&quot;What?&quot;
-
-&quot;Eleanor on the other hand: well she left a blatant trail of conspiracy to commit homicide. We&#39;ll be booking both of you, but I&#39;d be more worried if I were her. Juries don&#39;t like her type. They like the heroes... And she won&#39;t get a penny of James now.&quot;
+&quot;Eleanor on the other hand: well, she left a blatant trail of conspiracy to commit homicide. I wouldn&#39;t be surprised if she planned to kill the chef too. Obviously, we&#39;ll be booking both of you, but I&#39;d be more worried if I were her. Juries don&#39;t like her type. They like the heroes, the young couples... And she won&#39;t get a penny of James now.&quot;
 
 A hint of a smile appears on Dolores&#39; face.
 
-&quot;You&#39;re not out of the road yet, kids. But I gotta bail. I want my fucking sushi.&quot;</tw-passagedata></tw-storydata>
+&quot;You&#39;re not out of the woods yet, kids. But I gotta bail. I want my fucking sushi.&quot;</tw-passagedata><tw-passagedata pid="73" name="Conclusion 4" tags="station" position="1875,200" size="100,100">You look around at the station interview room around you.
+
+&quot;A genius chef who hated his clientele, and needed a couple million dollars to shut up shop...&quot;
+
+&quot;...A selfish asshole billionaire...&quot;
+
+&quot;...His even-worse ex-wife...&quot;
+
+&quot;...And a Red Herring whom you could pin //either// murder on.&quot;
+
+&quot;They really stitched you two up.&quot;
+
+[[&quot;I&#39;m sorry, Dolores.&quot;, you say.-&gt;Conclusion 5]]
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
